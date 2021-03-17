@@ -59,10 +59,6 @@ resource "aws_s3_bucket" "data_science" {
   versioning {
     enabled = true
   }
-  logging {
-    target_bucket = "${aws_s3_bucket.logs.id}"
-    target_prefix = "log/"
-  }
   force_destroy = true
 }
 
